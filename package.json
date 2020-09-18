@@ -15,7 +15,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*": [
+    "src/**": [
       "yarn lint --fix",
        "yarn test:staged"
     ]
