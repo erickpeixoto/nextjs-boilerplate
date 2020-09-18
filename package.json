@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "test": "jest"
+    "test":  "jest --passWithNoTests"
   },
   "husky": {
     "hooks": {
@@ -16,7 +16,8 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix"
+      "yarn lint --fix",
+       "yarn test:staged"
     ]
   },
   "dependencies": {
