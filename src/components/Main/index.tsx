@@ -1,12 +1,8 @@
 import * as S from './styles'
 
-const Main = ({
-  title = 'eCommerce',
-  description = 'TypeScript, ReactJS, NextJS e Styled Components'
-}) => (
+const Main = () => (
   <S.Wrapper>
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
+    <h1 aria-label="Titulo">Main</h1>
   </S.Wrapper>
 )
 
