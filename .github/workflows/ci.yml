@@ -1,0 +1,36 @@
+name: ci
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Linting
+        run: yarn lint
+
+      - name: Typecheck
+        run: yarn typecheck
+
+      - name: Check commit message
+        uses: wagoid/commitlint-github-action@v3
+
+      - name: Test
+        run: yarn test -u
+
+      - name: Check coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

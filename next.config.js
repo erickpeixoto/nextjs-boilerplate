@@ -6,5 +6,11 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
     disable: !isProd
+  },
+  images: {
+    domains: ['localhost']
+  },
+  future: {
+    webpack5: true
   }
 })

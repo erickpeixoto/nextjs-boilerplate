@@ -14,6 +14,8 @@ This project uses lot of stuff as:
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 
+[![codecov](https://codecov.io/gh/erickpeixoto/nextjs-boilerplate/branch/develop/graph/badge.svg?token=OJ60CH6WLB)](https://codecov.io/gh/erickpeixoto/nextjs-boilerplate)
+
 ## Getting Started
 
 First, run the development server:
