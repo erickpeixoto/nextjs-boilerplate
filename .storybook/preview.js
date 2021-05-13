@@ -1,22 +1,26 @@
+import '../.jest/next-image.mock'
+import { addDecorator } from '@storybook/react'
+import { withNextRouter } from 'storybook-addon-next-router'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
 
 export const parameters = {
   backgrounds: {
-    default: 'zerometer-light',
+    default: 'light',
     values: [
       {
-        name: 'zerometer-light',
+        name: 'light',
         value: theme.colors.white
       },
       {
-        name: 'zerometer-dark',
+        name: 'dark',
         value: theme.colors.mainBg
       }
     ]
   }
 }
+addDecorator(withNextRouter())
 
 export const decorators = [
   (Story) => (
