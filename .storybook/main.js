@@ -3,6 +3,9 @@ module.exports = {
   addons: ['@storybook/addon-essentials'],
   webpackFinal: (config) => {
     config.resolve.modules.push(`${process.cwd()}/src`)
+    config.resolve.alias = {
+      '@': path.resolve(__dirname, '..', 'src')
+    }
     return config
   }
 }

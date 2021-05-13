@@ -15,10 +15,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "rootDir": "src",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"],
