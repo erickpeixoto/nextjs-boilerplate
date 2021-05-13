@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path')
+
 module.exports = {
   stories: ['../src/components/**/stories.tsx'],
   addons: ['@storybook/addon-essentials'],
